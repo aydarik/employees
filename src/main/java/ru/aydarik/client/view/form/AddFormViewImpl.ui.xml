@@ -1,0 +1,43 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:datepicker="urn:import:com.google.gwt.user.datepicker.client">
+
+    <ui:with field='mes' type='ru.aydarik.client.Messages'/>
+
+    <g:HTMLPanel>
+        <table width="100%">
+            <tr>
+                <td>
+                    <ui:text from="{mes.empName}"/>
+                </td>
+                <td>
+                    <g:TextBox width="100%" ui:field="nameBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ui:text from="{mes.empSurname}"/>
+                </td>
+                <td>
+                    <g:TextBox width="100%" ui:field="surnameBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ui:text from="{mes.empBdate}"/>
+                </td>
+                <td>
+                    <datepicker:DateBox width="100%" ui:field="bdateBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <g:HorizontalPanel>
+                        <g:PushButton ui:field="okButton" text="{mes.add}"/>
+                        <g:PushButton ui:field="cancelButton" text="{mes.cancel}"/>
+                    </g:HorizontalPanel>
+                </td>
+            </tr>
+        </table>
+    </g:HTMLPanel>
+</ui:UiBinder>
